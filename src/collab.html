@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Aleo|Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<title>Have You Heard</title>
+	</head>
+	<body style="background-color: #252C4A;">
+		<header>
+			<div
+				class="container-fluid p-0 border-bottom-2"
+				style="font-family: 'Roboto', sans-serif;"
+			>
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<a
+						class="navbar-brand ml-2"
+						href="#"
+						style="color: yellow; font-size: 25px;"
+						>Have You Heard?</a
+					>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<div class="mr-auto mt-auto"></div>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Sobre Nós</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Como Jogar</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="#"
+									>Colabore <span class="sr-only">(current)</span></a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">PT</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">ES</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div
+					class="container-fluid"
+					style="background-color: #E0E0E0; width: 100%;"
+				>
+					<p class="ml-2">Um jogo sobre mal entendidos</p>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container" style="font-family: 'Aleo', serif;">
+				<div class="row">
+					<div class="col-md-6 mt-3">
+						<form>
+							<div class="form-group col-6">
+								<label for="topicSelect" style="color: white"
+									>Selecione um tópico</label
+								>
+								<select class="form-control" id="topicSelect">
+									<option>Esportes</option>
+									<option>Saúde</option>
+									<option>Economia</option>
+									<option>Atualidades</option>
+								</select>
+							</div>
+							<div class="form-group col-10 mt-4">
+								<label for="newsLink" style="color: white"
+									>Link da notícia</label
+								>
+								<input
+									type="url"
+									class="form-control"
+									id="newsLink"
+									placeholder="https://exemplo.com/exemplo"
+								/>
+							</div>
+							<div class="form-group col-10 mt-5">
+								<label for="gameNews" style="color: white;"
+									>Escreva a notícia e marque entre parênteses o que não irá
+									aparecer</label
+								>
+								<small
+									id="gameNewsHelper"
+									class="form-text"
+									style="color: #418BCC;"
+								>
+									Exemplo: Have you heard é um jogo sobre (mal entendidos).
+								</small>
+								<textarea
+									class="form-control"
+									id="gameNews"
+									rows="3"
+									aria-describedby="gameNewsHelper"
+								></textarea>
+								<small
+									id="gameNewsHelper"
+									class="form-text"
+									style="color:#F5364C;"
+								>
+									Coloque o que não irá aparecer entre parênteses
+								</small>
+							</div>
+							<button
+								type="submit"
+								class="btn btn-light btn-lg ml-3"
+								style="
+					color: #F5364C; 
+					background-color: #F2F2F2; 
+					box-shadow: 3px 3px 0px #F5364C;
+					border-radius: 10px; 
+					font-weight: bold;"
+							>
+								Enviar sua notícia
+							</button>
+						</form>
+					</div>
+					<div class="col-md-6 mt-5">
+						<p
+							class="pt-3"
+							style="font-size: clamp(16px, 3vw, 18px); color: white"
+						>
+							Have You Heard, nasceu inserido dentro de um propósito: a
+							conscientização sobre o impacto das Fake News, em nosso cotidiano.
+							Nunca antes tivemos acesso a tanta informação, e hoje, qualquer
+							pessoa tem a capacidade de criar um impacto muito grande para
+							disseminar informações, seja de forma passiva ou ativa.
+						</p>
+						<p
+							class="pt-0"
+							style="font-size: clamp(16px, 3vw, 18px); color: white"
+						>
+							Esse é um assunto de extrema importância na atualidade, e o jogo,
+							mesmo que em um tom leve e de humor, busca conscientizar as
+							pessoas a sempre checarem as informações e a questionar,
+							principalmente se for compartilhar com outras pessoas.
+						</p>
+						<p
+							class="pt-0"
+							style="font-size: clamp(16px, 3vw, 18px); color: white"
+						>
+							E queremos engajar as pessoas sobre esse assunto, por isso pedimos
+							a sua contribuição com a nosso jogo!
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container-fluid">
+				<div class="row pt-5 mb-n2">
+					<img
+						class="img-fluid"
+						src="../assets/footer_xlg_new.png"
+						alt="Personagens do Jogo"
+					/>
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
