@@ -8,16 +8,23 @@ $("#main").ready(function() {
 			"Content-Type": "application/json"
 		}
 	}).done(function(msg) {
-		var response = JSON.parse(msg);
-		console.log(response.data);
+		var response = msg.data;
+		console.log(response);
 
-		for (var i = 0; i < response.data.length; i++) {
-			$(".list").append("<option>" + response.data[i].name + "</option>");
+		for (var i = 0; i < response.length; i++) {
+			$(".list").append(
+				"<option id='" +
+					response[i].id_topic +
+					"'>" +
+					response[i].name +
+					"</option>"
+			);
 		}
 	});
 });
 
-$("#sendform").click(function() {
+$("#sendform").click(function(e) {
+	e.preventDefault();
 	var $completText = $("#gameNews");
 	var $url = $("#newsLink");
 
@@ -27,25 +34,20 @@ $("#sendform").click(function() {
 		id_topic: 4,
 		url: $url.val()
 	};
-	console.log(postData);
 
+	postDataJSON = JSON.stringify(postData);
+
+	console.log(typeof postDataJSON);
+	console.log(postDataJSON);
 	$.ajax({
 		type: "POST",
 		url: "https://haveyouheard-game.herokuapp.com/add_news",
-		contentType: "text/html; charset=utf-8",
+		dataType: "json; charset=UTF-8",
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 			Accept: "*/*"
 		},
-		data: {
-			complete_text:
-				"Livro do (‘menino do Acre’) entra na lista dos mais vendidos no Brasil",
-			incomplete_text:
-				"Livro do ________ entra na lista dos mais vendidos no Brasil",
-			id_topic: 4,
-			url:
-				"https://brasil.estadao.com.br/noticias/geral,livro-do-menino-do-acre-entra-na-lista-dos-livros-mais-vendidos,70001924841"
-		},
+		data: postDataJSON,
 		success: function() {
 			alert("Obrigado por Contribuir!");
 			console.log(postData);

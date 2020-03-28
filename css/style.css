@@ -10,7 +10,7 @@
 
 .navbar-toggle {
 	/* (80px - button height 34px) / 2 = 23px */
-	margin-top: 23px;
+	margin-top: 20px;
 	padding: 9px 10px !important;
 }
 
@@ -25,4 +25,9 @@
 		padding-bottom: 26.5px;
 		line-height: 27px;
 	}
+}
+
+footer {
+	position: relative;
+	bottom: 0px;
 }
