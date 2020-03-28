@@ -77,17 +77,12 @@
 			<div class="container" style="font-family: 'Aleo', serif;">
 				<div class="row">
 					<div class="col-md-6 mt-3">
-						<form>
+						<form id="fullform">
 							<div class="form-group col-6">
 								<label for="topicSelect" style="color: white"
 									>Selecione um tópico</label
 								>
-								<select class="form-control" id="topicSelect">
-									<option>Esportes</option>
-									<option>Saúde</option>
-									<option>Economia</option>
-									<option>Atualidades</option>
-								</select>
+								<select class="form-control list" id="topicSelect"> </select>
 							</div>
 							<div class="form-group col-10 mt-4">
 								<label for="newsLink" style="color: white"
@@ -135,6 +130,7 @@
 					box-shadow: 3px 3px 0px #F5364C;
 					border-radius: 10px; 
 					font-weight: bold;"
+								id="sendform"
 							>
 								Enviar sua notícia
 							</button>
@@ -182,7 +178,7 @@
 				</div>
 			</div>
 		</footer>
-
+		<script src="request.js"></script>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
