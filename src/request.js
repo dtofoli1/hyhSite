@@ -13,8 +13,8 @@ $("#main").ready(function() {
 
 		for (var i = 0; i < response.length; i++) {
 			$(".list").append(
-				"<option id='" +
-					response[i].id_topic +
+				"<option value='" +
+					response[i].id +
 					"'>" +
 					response[i].name +
 					"</option>"
@@ -27,11 +27,16 @@ $("#sendform").click(function(e) {
 	e.preventDefault();
 	var $completText = $("#gameNews");
 	var $url = $("#newsLink");
+	var selectForm = document.getElementById("topicSelect");
+	var selectedId = selectForm.options[selectForm.selectedIndex].value;
+
+	var incompletText = $completText.val().replace(/ *\([^)]*\) */g, "___");
+	var completText = $completText.val().replace(/[()]/g, "");
 
 	var postData = {
-		complete_text: $completText.val(),
-		incomplete_text: $completText.val(),
-		id_topic: 4,
+		complete_text: completText,
+		incomplete_text: incompletText,
+		id_topic: selectedId,
 		url: $url.val()
 	};
 

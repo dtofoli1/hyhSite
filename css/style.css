@@ -31,3 +31,12 @@ footer {
 	position: relative;
 	bottom: 0px;
 }
+
+#botBar {
+	background-color: #e0e0e0;
+	max-width: 100%;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: clamp(18px, 3vw, 21px);
+}
